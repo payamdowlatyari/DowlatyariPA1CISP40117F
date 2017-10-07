@@ -17,10 +17,10 @@ public class Multiply3 {
     private boolean bool;
     
     public void quiz (){
-        while (userAnswer != -1) {
+        
             createQuestion();
             checkResponse();        
-        }  
+         
     }
     
     public void createQuestion (){
@@ -40,6 +40,7 @@ public class Multiply3 {
             multiplyArray[2][counter]= correctAnswer;
             multiplyArray[3][counter]= userAnswer;
             counter++;
+            
     }
     
     public String createResponse (boolean bool){
@@ -92,6 +93,9 @@ public class Multiply3 {
             }
          
         System.out.print(createResponse(bool));
+        if (userAnswer != -1) {
+        quiz();
+        }
          
     }
     
